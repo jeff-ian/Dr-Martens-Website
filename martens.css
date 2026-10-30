@@ -1,0 +1,347 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hero {
+  height: 900px;
+}
+
+.header {
+  height: 65px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+}
+
+.header > * {
+  display: flex;
+}
+
+.header-left {
+  gap: 20px;
+}
+
+.main {
+  height: 780px;
+  background-color: #F2F213;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.main-focal-grid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 100px;
+  gap: 0;
+}
+
+.main-focal-grid :first-child {
+  font-family: 'Anton', sans-serif;
+  font-size: 96px;
+  margin-bottom: 0;
+}
+
+.main-focal-grid :nth-child(2) {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.main-focal-grid :nth-child(3) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.shop-now {
+  width: 180px;
+  height: 51px;
+  padding: 10px 20px;
+  color: black;
+  font-size: 24px;
+  background-color: transparent;
+  font-family: 'Bebas Neue', sans-serif;
+  border: 1px solid black;
+}
+
+
+.product-page-header {
+  display: flex;
+  align-items: flex-end;
+  font-family: 'Anton', sans-serif;
+  font-size: 96px;
+}
+
+.product-grid {
+  display: grid;
+  padding:0 5px;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 402px);
+  row-gap: 40px;
+}
+
+.product-grid img {
+  width: 100%;
+  height: 322px;
+  object-fit: cover;
+  display: block;
+}
+
+/* Description text styles (was .pr1-description-grid, which matched nothing) */
+.pr-description-grid > :nth-child(1),
+.pr-description-grid > :nth-child(2) {
+  font-family: 'Anton', sans-serif;
+  font-size: 18px;
+}
+
+.pr-description-grid > :nth-child(3) {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+/* Hidden by default, revealed on hover */
+.pr-description-grid {
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.pr:hover .pr-description-grid {
+  opacity: 1;
+}
+
+/* Touch devices can't hover, so keep the text visible there */
+@media (hover: none) {
+  .pr-description-grid {
+    opacity: 1;
+  }
+}
+
+.boots-page {
+  display: grid;
+  height: 800px;
+  grid-template-columns: 2.5fr 3fr;
+}
+
+.whimsigoth ,.bounce {
+  position:relative;
+  height:100%;
+}
+
+.whimsigoth {
+  background-color: black;
+  color:white;
+}
+
+.bounce {
+  background-color:white;
+  color:black;
+}
+
+.bounce .content-grid , .whimsigoth .content-grid {
+  position :absolute;
+  left:50%;
+  top:60%;
+  transform:translate(-50%,-50%);
+  width:80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bounce .content-text ,.whimsigoth .content-text {
+  font-family: 'Anton',sans-serif;
+  font-size:96px ;
+  margin-bottom: 20px;
+  text-align: center;
+  line-height: 1;
+}
+
+button{
+  font-family: 'Bebas nue',sans-serif;
+  font-size: 16px;
+  padding:12px 8px
+}
+
+
+.whimsigoth button {
+  border: 1px solid white;
+  background-color: black;
+  color:white
+}
+
+.bounce button {
+  border: 1px solid black;
+  background-color: white;
+  color:black
+}
+
+
+.categories-page {
+  height:700px;
+  position: relative;
+  padding:0 30px;
+  color:black;
+
+}
+
+.categories-page  :first-child {
+  font-family: 'Roboto',sans-serif;
+  font-size: 16px;
+
+}
+
+
+.categories-page :nth-child(2) {
+  position: absolute;
+  top:40%;
+  transform: translate(0,-50%);
+  font-family: 'Anton',sans-serif;
+  font-size: 120px;
+  line-height: 1;
+  text-align: center;
+  
+}
+
+.collab-page {
+  height:900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.collab-page >* {
+  padding-left: 20px;
+  
+}
+
+.section1 {
+  position: relative;
+  background-color: #F2F213;
+  
+}
+
+.section-content {
+  position: absolute;
+  top:35%
+}
+
+.section-content :first-child {
+  font-family: 'Anton',sans-serif;
+  font-size: 128px;
+  line-height: 1;
+  margin-bottom:40px
+}
+
+
+.collab-page button {
+  margin-left:200px;
+  background-color: #F2F213;
+  color:black;
+  border: 1px solid black;
+}
+
+
+
+.shoes-page {
+  height:900px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom:40px
+}
+
+.shoes-page .section1 {
+  position: relative;
+  background-color: black;
+}
+
+.shoes-page .section2 {
+  background-color: #F2F213;
+}
+
+.shoes-section-content1 {
+  position:absolute;
+  top:60%;
+  transform: translate(0,-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0 30px
+}
+
+.shoes-section-content1 :first-child{
+  font-family: 'Anton',sans-serif;
+  font-size: 100px;
+  color:white;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.shoes-section-content1 button {
+  background-color: black;
+  color:white;
+  border: 1px solid white;
+}
+
+.shoes-section-content2 {
+  padding-top:30px;
+  position:absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding:0 60px
+}
+
+.shoes-section-content2 :first-child{
+  font-family: 'Anton',sans-serif;
+  font-size: 100px;
+  color:black;
+  line-height: 1;
+  text-align: center;
+ margin-bottom: 460px;
+} 
+
+.shoes-section-content2 button {
+  background-color: black;
+  color:white;
+  border: none;
+}
+
+.styled-page {
+  border: 2px solid red;
+  height:700px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.styled-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.styled-header :first-child {
+  font-family: 'Anton',sans-serif;
+  font-size: 80px;
+  color:black
+}
+
+.styled-header :nth-child(2) {
+  border-bottom: 1px solid black;
+}
