@@ -322,7 +322,6 @@ button{
 }
 
 .styled-page {
-  border: 2px solid red;
   height:700px;
   display: flex;
   flex-direction: column;
